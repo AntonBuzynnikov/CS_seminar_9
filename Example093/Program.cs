@@ -6,8 +6,11 @@ for(int i = 0;i<resultArray.GetLength(0);i++)
 {
     for(int j = 0; j<resultArray.GetLength(1);j++)
     {
-        resultArray[i,j] = firstArray[i,j]*secondArray[i,j];
-        System.Console.Write($"{resultArray[i,j]} ");
+        for (int k = 0; k < secondArray.GetLength(0); k++)
+	{
+            resultArray[i,j] += firstArray[i,k]*secondArray[k,j];
+	}
+	System.Console.Write($"{resultArray[i,j]} "); 
     }
     System.Console.WriteLine();
 }

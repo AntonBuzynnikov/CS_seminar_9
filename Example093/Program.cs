@@ -6,7 +6,7 @@ Console.WriteLine();
 int[,] secondArray = Random2DArray(5,5);
 Print2DArray(secondArray);
 Console.WriteLine();
-int[,] resultArray = new int[5,5];
+int[,] resultArray = new int[firstArray.GetLength(0),secondArray.GetLength(1)];
 for(int i = 0;i<resultArray.GetLength(0);i++)
 {
     for(int j = 0; j<resultArray.GetLength(1);j++)
